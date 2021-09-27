@@ -1,9 +1,6 @@
 import {
     Leon,
     Lobo,
-    Oso,
-    Serpiente,
-    Aguila,
     Full
 } from "./investigados.js"
 
@@ -66,12 +63,6 @@ const data = (async function() {
                     animal.Rugir(playerElement);
                 } else if (animal.Nombre === "Lobo") {
                     animal.Aullar(playerElement)
-                } else if (animal.Nombre === "Aguila") {
-                    animal.Chillar(playerElement)
-                } else if (animal.Nombre === "Serpiente") {
-                    animal.Sisear(playerElement)
-                } else if (animal.Nombre === "Oso") {
-                    animal.Gruñir(playerElement)
                 } else if (animal.Nombre === "Full") {
                 }
             })
@@ -113,24 +104,6 @@ const data = (async function() {
                 {
                     const lobo = new Lobo(nombre, edad, imagen, comentarios, sonido);
                     tarjetas.push(lobo);
-                }
-                break;
-            case "Oso":
-                {
-                    const oso = new Oso(nombre, edad, imagen, comentarios, sonido);
-                    tarjetas.push(oso);
-                }
-                break;
-            case "Aguila":
-                {
-                    const aguila = new Aguila(nombre, edad, imagen, comentarios, sonido);
-                    tarjetas.push(aguila);
-                }
-                break;
-            case "Serpiente":
-                {
-                    const serpiente = new Serpiente(nombre, edad, imagen, comentarios, sonido);
-                    tarjetas.push(serpiente);
                 }
                 break;
              case "Full": {

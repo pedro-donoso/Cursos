@@ -11,21 +11,6 @@
       "sonido":"Aullido.mp3"
     },
     {
-      "name": "Oso",
-      "imagen": "Oso.jpg",
-      "sonido":"Gruñido.mp3"
-    },
-    {
-      "name": "Serpiente",
-      "imagen": "Serpiente.jpg",
-      "sonido":"Siseo.mp3"
-    },
-    {
-      "name": "Aguila",
-      "imagen": "Aguila.png",
-      "sonido":"Chillido.mp3"
-    },
-    {
       "name": "Full",
       "imagen": "Full.png"
     }
