@@ -1,106 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cursos 2022</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-     <!-- bootstrap css -->
-      <!-- estilos css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- bootstrap css -->
+    <!-- estilos css -->
     <link rel="stylesheet" href="assets/css/style.css" />
-     <!-- estilos css -->
+    <!-- estilos css -->
 </head>
+
 <body>
     <!-- contenedor -->
-   <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-sm-7 card text-center bg-success py-3" id="Tabla">
-            <h5>Nuevos Cursos 2022</h5>
-            <div id="Cursos" class="cards d-flex align-items-start flex-wrap bg-dark"></div>
-        </div>
-        <div class="col-12 col-sm-5 card bg-primary">
-            <div class="card-body">
-                <h5 class="card-title">Registro de cursos:</h5>
-                <div class="card-text">
-                    <div class="form-group">
-                        <select class="form-control bg-dark text-white" id="curso">
-                <option disabled selected>Selecciona curso</option>
-                    <option value="VueJs">VueJs</option>
-                    <option value="React">React</option>
-                    <option value="Angular">Angular</option>
-              </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control bg-dark text-white" id="sede">
-                <option disabled selected>Selecciona sede</option>
-                <option value="Santiago">Santiago, Chile</option>
-                  <option value="Cordoba">Córdoba, Argentina</option>
-                    <option value="Lima">Lima, Perú</option>
-              </select>
-                    </div>
-
-                      <div class="form-group">
-                          <select class="form-control bg-dark text-white" id="modalidad">
-                              <option disabled selected>Selecciona modalidad</option>
-                              <option value="Online">Online</option>
-                              <option value="Presencial">Presencial</option>
-                          </select>
-                      </div>
-
-
-
-
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Agrega comentarios:</label>
-                        <textarea rows="5" class="form-control" id="comentarios"></textarea>
-                    </div>
-                    <div class="card">
-                        <img id="preview"></img>
-                    </div>
-                </div>
-                <btn class="btn btn-success d-block" id="Registrar">Tomar curso</btn>
-
-
-                     <button id="btnPop" class="btn btn-outline-danger mt-5">Limpiar Tabla</button> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-7 card text-center bg-success py-3" id="Tabla">
+                <h5>Nuevos Cursos 2022</h5>
+                <div id="Cursos" class="cards d-flex align-items-start flex-wrap bg-dark"></div>
             </div>
-
-
-         
+            <div class="col-12 col-sm-5 card bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Registro de cursos:</h5>
+                    <div class="card-text">
+                        <div class="form-group">
+                            <select class="form-control bg-dark text-white" id="curso">
+                                <option disabled selected>Selecciona curso</option>
+                                <option value="VueJs">VueJs</option>
+                                <option value="React">React</option>
+                                <option value="Angular">Angular</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control bg-dark text-white" id="sede">
+                                <option disabled selected>Selecciona sede</option>
+                                <option value="Santiago">Santiago, Chile</option>
+                                <option value="Cordoba">Córdoba, Argentina</option>
+                                <option value="Lima">Lima, Perú</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control bg-dark text-white" id="modalidad">
+                                <option disabled selected>Selecciona modalidad</option>
+                                <option value="Online">Online</option>
+                                <option value="Presencial">Presencial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Agrega comentarios:</label>
+                            <textarea rows="5" class="form-control" id="comentarios"></textarea>
+                        </div>
+                        <div class="card">
+                            <img id="preview"></img>
+                        </div>
+                    </div>
+                    <btn class="btn btn-success d-block" id="Registrar">Tomar curso</btn>
+                </div>
+            </div>
         </div>
-
-
-
     </div>
-
-             
-        </div>
-          </div>
-
-     </div>
-
-  
- 
-
-       <!-- modal -->
+    </div>
+    </div>
+    <button id="btnPop" class="btn btn-outline-danger mt-5">Limpiar Tabla</button>
+    <!-- modal -->
     <div class="modal fade" id="modal">
         <div class="modal-dialog w-50 text-center" role="document">
             <div class="modal-content bg-dark">
                 <div class="modal-body"></div>
             </div>
-
-       
-
-
-
-          <!-- modal -->
-
-       
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script type="module" src="./assets/js/index.js"></script>
+            <!-- modal -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+                integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+                crossorigin="anonymous"></script>
+            <script type="module" src="./assets/js/index.js"></script>
 </body>
+
 </html>
