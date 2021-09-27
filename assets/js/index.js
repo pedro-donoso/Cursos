@@ -53,7 +53,7 @@ function vista() {
                 <p class="text-white text-center" style="font-size: 16px">Curso: ${tarjeta__curso.Curso}</p>
                 <p class="text-white text-center" style="font-size: 16px">Sede: ${tarjeta__curso.Sede}</p>
                  <p class="text-white text-center" style="font-size: 16px">Modalidad: ${tarjeta__curso.Modalidad}</p>
-                <p class="text-white text-center" style="font-size: 16px">${tarjeta__curso.Comentarios}</p>
+                <p class="text-white text-center" style="font-size: 16px">Comentarios: ${tarjeta__curso.Comentarios}</p>
                 `
             })
             botonera.addEventListener("click", () => {
