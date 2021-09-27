@@ -8,7 +8,8 @@ import {
 
 // creo constantes
     const cursoElement = document.querySelector("#curso")
-    const sedeElement = document.querySelector("#sede")
+const sedeElement = document.querySelector("#sede")
+        const modalidadElement = document.querySelector("#modalidad")
     const comentariosElement = document.querySelector("#comentarios")
     const previewElement = document.querySelector("#preview")
     const RegistrarElement = document.querySelector("#Registrar")
@@ -49,9 +50,10 @@ function vista() {
                 const modalBody = document.querySelector(".modal-body");
                 modalBody.innerHTML = `
                 <img src="./assets/imgs/${tarjeta__curso.Img}" style="width: 50%" class="img-fluid" />
-                <p class="text-white text-center" style="font-size: 14px"> ${tarjeta__curso.Curso}</p>
-                <p class="text-white text-center" style="font-size: 14px">${tarjeta__curso.Sede}</p>
-                <p class="text-white text-center" style="font-size: 14px">${tarjeta__curso.Comentarios}</p>
+                <p class="text-white text-center" style="font-size: 16px">Curso: ${tarjeta__curso.Curso}</p>
+                <p class="text-white text-center" style="font-size: 16px">Sede: ${tarjeta__curso.Sede}</p>
+                 <p class="text-white text-center" style="font-size: 16px">Modalidad: ${tarjeta__curso.Modalidad}</p>
+                <p class="text-white text-center" style="font-size: 16px">${tarjeta__curso.Comentarios}</p>
                 `
             })
             botonera.addEventListener("click", () => {
@@ -78,6 +80,7 @@ function vista() {
     RegistrarElement.addEventListener("click", () => {
         const curso = cursoElement.value;
         const sede = sedeElement.value;
+        const modalidad = modalidadElement.value;
         const comentarios = comentariosElement.value;
         const {
             imagen
@@ -85,17 +88,17 @@ function vista() {
 
         switch (curso) {
              case "VueJs": {
-                 const vuejs = new VueJs(curso, sede, imagen, comentarios);
+                 const vuejs = new VueJs(curso, sede, modalidad, imagen, comentarios);
                  cards.push(vuejs);
              }
                 break;
               case "React": {
-                  const react = new React(curso, sede, imagen, comentarios);
+                  const react = new React(curso, sede, modalidad, imagen, comentarios);
                   cards.push(react);
               }
                 break;
             case "Angular": {
-                const angular = new Angular(curso, sede, imagen, comentarios);
+                const angular = new Angular(curso, sede, modalidad, imagen, comentarios);
                 cards.push(angular);
             }
             break;
