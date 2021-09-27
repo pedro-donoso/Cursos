@@ -15,10 +15,32 @@ const sedeElement = document.querySelector("#sede")
     const RegistrarElement = document.querySelector("#Registrar")
    // creo constantes
 
+
+let btnPop = document.getElementById('btnPop')
+
+
+
+
+
+
+
 //    creo array vacío cards
 const cards = [];
 let Cursos = [];
+
+
+
+
+
+
+
+
+
+
+
 //    creo array vacío cards
+
+
 
     try {
         const Request = await fetch("/cursos.json");
@@ -29,6 +51,12 @@ let Cursos = [];
     } catch (e) {
         console.error(e)
     }
+
+
+
+
+
+
 
     // creo función vista
 function vista() {
@@ -47,6 +75,11 @@ function vista() {
             // evento click modal
             imagen.addEventListener("click", () => {
                 $("#modal").modal("show");
+
+
+
+
+
                 const modalBody = document.querySelector(".modal-body");
                 modalBody.innerHTML = `
                 <img src="./assets/imgs/${tarjeta__curso.Img}" style="width: 50%" class="img-fluid" />
@@ -56,6 +89,10 @@ function vista() {
                 <p class="text-white text-center" style="font-size: 16px">Comentarios: ${tarjeta__curso.Comentarios}</p>
                 `
             })
+
+
+
+
             botonera.addEventListener("click", () => {
                 if (tarjeta__curso.Nombre === "VueJs") {
                 } else if (tarjeta__curso.Nombre === "React") {
@@ -67,7 +104,13 @@ function vista() {
             elementos.appendChild(tarjeta)
                 // evento click modal
         })
-    }
+}
+    
+
+
+
+
+
     // creo función vista
 
     cursoElement.addEventListener("change", () => {
@@ -76,6 +119,11 @@ function vista() {
 
         previewElement.setAttribute("src", `./assets/imgs/${buscar.imagen}`)
     });
+
+
+   
+
+
 
     RegistrarElement.addEventListener("click", () => {
         const curso = cursoElement.value;
@@ -105,8 +153,16 @@ function vista() {
             
         }
 
+
+
         console.log({
             cards
         })
         vista();
     })
+
+
+btnPop.addEventListener('click', function () {
+    cards.pop()
+    modal.innerHTML = `[${vista(cards)}]`
+})
