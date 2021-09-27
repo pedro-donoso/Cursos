@@ -3,13 +3,11 @@ export class Animal {
     #edad;
     #img;
     #comentarios;
-    #sonido;
-    constructor(nombre, edad, img, comentarios, sonido){
+    constructor(nombre, edad, img, comentarios){
         this.#nombre=nombre;
         this.#edad=edad;
         this.#img=img;
         this.#comentarios=comentarios;
-        this.#sonido=sonido;
     }
 
     get Nombre(){
@@ -20,9 +18,6 @@ export class Animal {
     }
     get Img(){
         return this.#img;
-    }
-    get Sonido(){
-        return this.#sonido;
     }
     get Comentarios(){
         return this.#comentarios;

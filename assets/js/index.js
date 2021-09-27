@@ -38,11 +38,7 @@ const data = (async function() {
 
             carta.classList.add("card", "text-white", "bg-primary")
             carta.style.width = "50%";
-            fotito.innerHTML = `<img src="./assets/imgs/${animal.Img}" class="card-img-top"/>`
-            botonera.classList.add("card-body")
-            botonera.innerHTML = `<a href="#" >
-            <img src="./assets/imgs/audio.svg" style="width:25%"/>
-            </a>`;
+            fotito.innerHTML = `<img src="./assets/imgs/${animal.Img}" class="card-img-top"/>`;
 
             fotito.addEventListener("click", () => {
                 $("#modal").modal("show");
@@ -85,8 +81,7 @@ const data = (async function() {
         const edad = edadElement.value;
         const comentarios = comentariosElement.value;
         const {
-            imagen,
-            sonido
+            imagen
         } = Animales.find(animal => animal.name === nombre)
 
         switch (nombre) {
