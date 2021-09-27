@@ -1,15 +1,20 @@
+// clase
 export class Curso {
     #curso;
     #sede;
     #img;
     #comentarios;
+
+    // constructor
     constructor(curso, sede, img, comentarios){
         this.#curso=curso;
         this.#sede=sede;
         this.#img=img;
         this.#comentarios=comentarios;
     }
+  // constructor
 
+    // gets
     get Curso(){
         return this.#curso;
     }
@@ -25,4 +30,6 @@ export class Curso {
     set Comentarios(value){
         this.#comentarios=value;
     }
+     // gets
 }
+// clase

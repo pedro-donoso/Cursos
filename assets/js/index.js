@@ -1,16 +1,23 @@
+// importo desde malla.js
 import {
     VueJs,
     React, 
     Angular
 } from "./malla.js"
+// importo desde malla.js
 
+// creo constantes
     const cursoElement = document.querySelector("#curso")
     const sedeElement = document.querySelector("#sede")
     const comentariosElement = document.querySelector("#comentarios")
     const previewElement = document.querySelector("#preview")
     const RegistrarElement = document.querySelector("#Registrar")
-    const tarjetas = [];
-    let Cursos = [];
+   // creo constantes
+
+//    creo array vacío cards
+const cards = [];
+let Cursos = [];
+//    creo array vacío cards
 
     try {
         const Request = await fetch("/cursos.json");
@@ -22,21 +29,22 @@ import {
         console.error(e)
     }
 
-    function vista() {
-        const elementos = document.querySelector(".tarjetas");
-
-        elementos.innerHTML = ""
-
-        tarjetas.forEach(tarjeta__curso => {
-            const carta = document.createElement("div")
-            const fotito = document.createElement("div");
+    // creo función vista
+function vista() {
+        // selecciono array vacío cards
+        const elementos = document.querySelector(".cards");
+    elementos.innerHTML = ""
+       // recorro cards  creo esctructura
+        cards.forEach(tarjeta__curso => {
+            const tarjeta = document.createElement("div")
+            const imagen = document.createElement("div");
             const botonera = document.createElement("div");
-
-            carta.classList.add("card", "text-white", "bg-primary")
-            carta.style.width = "50%";
-            fotito.innerHTML = `<img src="./assets/imgs/${tarjeta__curso.Img}" class="card-img-top"/>`;
-
-            fotito.addEventListener("click", () => {
+            tarjeta.classList.add("card", "text-white", "bg-primary")
+            tarjeta.style.width = "50%";
+            // envio tarjeta al panel
+            imagen.innerHTML = `<img src="./assets/imgs/${tarjeta__curso.Img}" class="card-img-top"/>`;
+            // evento click modal
+            imagen.addEventListener("click", () => {
                 $("#modal").modal("show");
                 const modalBody = document.querySelector(".modal-body");
                 modalBody.innerHTML = `
@@ -46,30 +54,25 @@ import {
                 <p class="text-white text-center" style="font-size: 14px">${tarjeta__curso.Comentarios}</p>
                 `
             })
-
-
             botonera.addEventListener("click", () => {
                 if (tarjeta__curso.Nombre === "VueJs") {
                 } else if (tarjeta__curso.Nombre === "React") {
                 } else if (tarjeta__curso.Nombre === "Angular") {
                 }
             })
-
-            carta.appendChild(fotito)
-            carta.appendChild(botonera)
-
-            elementos.appendChild(carta)
+            tarjeta.appendChild(imagen)
+            tarjeta.appendChild(botonera)
+            elementos.appendChild(tarjeta)
+                // evento click modal
         })
-
-
-
     }
+    // creo función vista
 
     cursoElement.addEventListener("change", () => {
         const eleccion = cursoElement.value;
-        const hallado = Cursos.find(curso__dato => curso__dato.name === eleccion)
+        const buscar = Cursos.find(curso__dato => curso__dato.name === eleccion)
 
-        previewElement.setAttribute("src", `./assets/imgs/${hallado.imagen}`)
+        previewElement.setAttribute("src", `./assets/imgs/${buscar.imagen}`)
     });
 
     RegistrarElement.addEventListener("click", () => {
@@ -83,24 +86,24 @@ import {
         switch (curso) {
              case "VueJs": {
                  const vuejs = new VueJs(curso, sede, imagen, comentarios);
-                 tarjetas.push(vuejs);
+                 cards.push(vuejs);
              }
                 break;
               case "React": {
                   const react = new React(curso, sede, imagen, comentarios);
-                  tarjetas.push(react);
+                  cards.push(react);
               }
                 break;
             case "Angular": {
                 const angular = new Angular(curso, sede, imagen, comentarios);
-                tarjetas.push(angular);
+                cards.push(angular);
             }
             break;
             
         }
 
         console.log({
-            tarjetas
+            cards
         })
         vista();
     })
