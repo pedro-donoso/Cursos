@@ -11,9 +11,15 @@ class React extends Curso {
     }
 
 };
+class Angular extends Curso {
+    constructor(...args) {
+        super(...args)
+    }
+
+};
 
 
 
 
 
-export { Curso, VueJs, React};
+export { Curso, VueJs, React, Angular};

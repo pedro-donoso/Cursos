@@ -1,7 +1,8 @@
 import {
     VueJs,
-    React
-} from "./investigados.js"
+    React, 
+    Angular
+} from "./malla.js"
 
     const cursoElement = document.querySelector("#curso")
     const sedeElement = document.querySelector("#sede")
@@ -50,6 +51,7 @@ import {
             botonera.addEventListener("click", () => {
                 if (tarjeta__curso.Nombre === "VueJs") {
                 } else if (tarjeta__curso.Nombre === "React") {
+                } else if (tarjeta__curso.Nombre === "Angular") {
                 }
             })
 
@@ -88,7 +90,12 @@ import {
                   const react = new React(curso, sede, imagen, comentarios);
                   tarjetas.push(react);
               }
-              break;
+                break;
+            case "Angular": {
+                const angular = new Angular(curso, sede, imagen, comentarios);
+                tarjetas.push(angular);
+            }
+            break;
             
         }
 
