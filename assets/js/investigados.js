@@ -1,10 +1,19 @@
-import { Animal } from "./Animal.js"
-class Full extends Animal {
+import { Curso } from "./Curso.js"
+class VueJs extends Curso {
     constructor(...args) {
         super(...args)
     }
 
-}
+};
+class React extends Curso {
+    constructor(...args) {
+        super(...args)
+    }
+
+};
 
 
-export { Animal, Full };
+
+
+
+export { Curso, VueJs, React};

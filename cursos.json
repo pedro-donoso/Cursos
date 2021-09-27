@@ -1,8 +1,12 @@
 {
   "cursos": [
     {
-      "name": "Full",
-      "imagen": "Full.png"
+      "name": "VueJs",
+      "imagen": "VueJs.jpg"
+    },
+    {
+      "name": "React",
+      "imagen": "React.png"
     }
    
   ]

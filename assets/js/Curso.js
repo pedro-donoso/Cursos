@@ -1,20 +1,20 @@
-export class Animal {
-    #nombre;
-    #edad;
+export class Curso {
+    #curso;
+    #sede;
     #img;
     #comentarios;
-    constructor(nombre, edad, img, comentarios){
-        this.#nombre=nombre;
-        this.#edad=edad;
+    constructor(curso, sede, img, comentarios){
+        this.#curso=curso;
+        this.#sede=sede;
         this.#img=img;
         this.#comentarios=comentarios;
     }
 
-    get Nombre(){
-        return this.#nombre;
+    get Curso(){
+        return this.#curso;
     }
-    get Edad(){
-        return this.#edad;
+    get Sede(){
+        return this.#sede;
     }
     get Img(){
         return this.#img;

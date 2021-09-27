@@ -15,16 +15,16 @@ body {
     background-repeat: no-repeat;
 }
 
-#Animales {
+#Cursos {
     height: 100%;
     background: #f0f0f0;
 }
 
-#Animales div div {
+#Cursos div div {
     transition: all 200ms;
 }
 
-#Animales div>div:hover {
+#Cursos div>div:hover {
     box-shadow: 0px 1px 5px 1px;
 }
 
