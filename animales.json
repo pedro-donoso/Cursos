@@ -1,16 +1,6 @@
 {
   "animales": [
     {
-      "name": "Leon",
-      "imagen": "Leon.png",
-      "sonido":"Rugido.mp3"
-    },
-    {
-      "name": "Lobo",
-      "imagen": "Lobo.jpg",
-      "sonido":"Aullido.mp3"
-    },
-    {
       "name": "Full",
       "imagen": "Full.png"
     }

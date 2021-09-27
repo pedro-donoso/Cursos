@@ -1,6 +1,4 @@
 import {
-    Leon,
-    Lobo,
     Full
 } from "./investigados.js"
 
@@ -59,11 +57,9 @@ const data = (async function() {
 
 
             botonera.addEventListener("click", () => {
-                if (animal.Nombre === "Leon") {
+                if (animal.Nombre === "Full") {
                     animal.Rugir(playerElement);
-                } else if (animal.Nombre === "Lobo") {
-                    animal.Aullar(playerElement)
-                } else if (animal.Nombre === "Full") {
+                } else if (animal.Nombre === "React") {
                 }
             })
 
@@ -94,18 +90,6 @@ const data = (async function() {
         } = Animales.find(animal => animal.name === nombre)
 
         switch (nombre) {
-            case "Leon":
-                {
-                    const leon = new Leon(nombre, edad, imagen, comentarios, sonido);
-                    tarjetas.push(leon);
-                }
-                break;
-            case "Lobo":
-                {
-                    const lobo = new Lobo(nombre, edad, imagen, comentarios, sonido);
-                    tarjetas.push(lobo);
-                }
-                break;
              case "Full": {
                  const full = new Full(nombre, edad, imagen, comentarios);
                  tarjetas.push(full);
