@@ -42,7 +42,6 @@ body {
 
 #Cursos {
     height: 92%;
-border: 1px solid var(--color-tres);
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
