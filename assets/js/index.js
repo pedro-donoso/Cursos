@@ -5,11 +5,11 @@ import {
     Angular
 } from "./malla.js"
 
-// creo constantes
+// creo constantes Course Principal y metodologia BEM
 const Course = document.querySelector("#curso")
 const Course__sede = document.querySelector("#sede")
 const Course__modalidad = document.querySelector("#modalidad")
-const Course__comentarios = document.querySelector("#comentarios")
+const Course__participantes = document.querySelector("#participantes")
 const Course__preview = document.querySelector("#preview")
 const Course__registrar = document.querySelector("#Registrar")
 
@@ -49,75 +49,68 @@ function Course__vista() {
             const modalBody = document.querySelector(".modal-body");
               // inyecto estructura en modal, Img2 viene desde Curso.js
             modalBody.innerHTML = `
-                <img src="./assets/imgs/${Course__tarjeta.Img2}" style="width: 75%" class="img-fluid" />
-                <p class="text-white text-center" style="font-size: 16px">Curso: ${Course__tarjeta.Curso}</p>
-                <p class="text-white text-center" style="font-size: 16px">Sede: ${Course__tarjeta.Sede}</p>
-                 <p class="text-white text-center" style="font-size: 16px">Modalidad: ${Course__tarjeta.Modalidad}</p>
-                <p class="text-white text-center" style="font-size: 16px">Reservó: ${Course__tarjeta.Comentarios}</p>
+                <img src="./assets/imgs/${Course__tarjeta.Img2}" style="width: 50%"/>
+                <p class="text-white text-center" style="font-size: 14px">Curso: ${Course__tarjeta.Curso}</p>
+                <p class="text-white text-center" style="font-size: 14px">Sede: ${Course__tarjeta.Sede}</p>
+                 <p class="text-white text-center" style="font-size: 14px">Modalidad: ${Course__tarjeta.Modalidad}</p>
+                <p class="text-white text-center" style="font-size: 14px">Reservó: ${Course__tarjeta.Participantes}</p>
                 `
         })
-
+// coincidencia
         Course__boton.addEventListener("click", () => {
-            if (Course__tarjeta.Nombre === "VueJs") {
-            } else if (Course__tarjeta.Nombre === "React") {
-            } else if (Course__tarjeta.Nombre === "Angular") {
+            if (Course__tarjeta.nombre === "VueJs") {
+            } else if (Course__tarjeta.nombre === "React") {
+            } else if (Course__tarjeta.nombre === "Angular") {
             }
         })
         Course__contenido.appendChild(Course__imagen)
         Course__contenido.appendChild(Course__boton)
         Course__elementos.appendChild(Course__contenido)
-        // evento click modal
     })
-
 }
 
-// Course principal
+// Course principal, capturo names e imagenes desde cursos.json
 Course.addEventListener("change", () => {
     const Course__eleccion = Course.value;
-
-    // capturo names desde cursos.json
-    const Course__buscar = Course__array.find(Course__dato => Course__dato.names === Course__eleccion)
-
-    // capturo imagenes dessde cursos.json
-    Course__preview.setAttribute("src", `./assets/imgs/${Course__buscar.imagenes}`)
+    const Course__buscado = Course__array.find(Course__dato => Course__dato.names === Course__eleccion)
+    Course__preview.setAttribute("src", `./assets/imgs/${Course__buscado.imagenes}`)
 });
 
-// contenido cards
+// Se rellena con valores selccionados, viene de Curso.js
 Course__registrar.addEventListener("click", () => {
     const curso = Course.value;
     const sede = Course__sede.value;
     const modalidad = Course__modalidad.value;
-    const comentarios = Course__comentarios.value;
+    const participantes = Course__participantes.value;
     const {imagenes} = Course__array.find(Course__dato => Course__dato.names === curso)
 
     switch (curso) {
         case "VueJs": {
-            const vuejs = new VueJs(curso, sede, modalidad, imagenes, comentarios);
+            const vuejs = new VueJs(curso, sede, modalidad, imagenes, participantes);
             Course__cards.push(vuejs);
         }
             break;
         case "React": {
-            const react = new React(curso, sede, modalidad, imagenes, comentarios);
+            const react = new React(curso, sede, modalidad, imagenes, participantes);
             Course__cards.push(react);
         }
             break;
         case "Angular": {
-            const angular = new Angular(curso, sede, modalidad, imagenes, comentarios);
+            const angular = new Angular(curso, sede, modalidad, imagenes, participantes);
             Course__cards.push(angular);
         }
             break;
-
     }
 
+    // Se muestra opciones seleccionadas por consola
     console.log({
         Course__cards
     })
 
+    // Limpia tabla
     Course__borrar.addEventListener('click', function () {
     Course__cards = [];
     Course__vista();
     })
-    
     Course__vista();
 })
-// contenido cards

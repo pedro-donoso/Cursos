@@ -2,18 +2,18 @@
 export class Curso {
     #curso;
     #sede;
-       #modalidad;
+    #modalidad;
     #img;
-    #comentarios;
+    #participantes;
    
 
     // constructor
-    constructor(curso, sede, modalidad, img, comentarios){
+    constructor(curso, sede, modalidad, img, participantes){
         this.#curso=curso;
         this.#sede = sede;
-               this.#modalidad = modalidad;
+        this.#modalidad = modalidad;
         this.#img=img;
-        this.#comentarios = comentarios;
+        this.#participantes = participantes;
   
     }
   // constructor
@@ -34,17 +34,14 @@ export class Curso {
         return this.#img;
     }
 
-    
-
-
-    get Comentarios(){
-        return this.#comentarios;
+    get Participantes(){
+        return this.#participantes;
     }
 
 
 
-    set Comentarios(value){
-        this.#comentarios=value;
+    set Participantes(value){
+        this.#participantes=value;
     }
      // gets
 }
