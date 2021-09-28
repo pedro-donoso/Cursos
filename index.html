@@ -18,16 +18,16 @@
     <!-- contenedor -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-7 card text-center bg-success py-3" id="Tabla">
-                <h5>Nuevos Cursos 2022</h5>
-                <div id="Cursos" class="cards d-flex align-items-start flex-wrap bg-dark"></div>
+            <div class="col-12 col-sm-7" id="Tabla">
+                <h6>Nuevos Cursos 2022</h6>
+                <div id="Cursos" class="cards"></div>
             </div>
-            <div class="col-12 col-sm-5 card bg-primary">
+            <div class="col-12 col-sm-5" id="Registro">
                 <div class="card-body">
-                    <h5 class="card-title">Registro de cursos:</h5>
+                    <h6 class="card-title">Registro de cursos:</h6>
                     <div class="card-text">
                         <div class="form-group">
-                            <select class="form-control bg-dark text-white" id="curso">
+                            <select class="form-control" id="curso">
                                 <option disabled selected>Selecciona curso</option>
                                 <option value="VueJs">VueJs</option>
                                 <option value="React">React</option>
@@ -35,7 +35,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control bg-dark text-white" id="sede">
+                            <select class="form-control" id="sede">
                                 <option disabled selected>Selecciona sede</option>
                                 <option value="Santiago">Santiago, Chile</option>
                                 <option value="Cordoba">Córdoba, Argentina</option>
@@ -43,14 +43,14 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control bg-dark text-white" id="modalidad">
+                            <select class="form-control" id="modalidad">
                                 <option disabled selected>Selecciona modalidad</option>
                                 <option value="Online">Online</option>
                                 <option value="Presencial">Presencial</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Nombre y Apellido:</label>
+                            <h6>Nombre y Apellido:</h6>
                             <input class="form-control" id="comentarios">
                         </div>
                         <div class="card">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <btn class="btn btn-success d-block" id="Registrar">Tomar curso</btn>
-                        <button id="Borrar" class="btn btn-outline-danger mt-5">Limpiar Tabla</button>
+                        <button id="Borrar" class="btn btn-outline-danger">Limpiar Tabla</button>
                 </div>
             </div>
         </div>
@@ -68,8 +68,8 @@
 
     <!-- modal -->
     <div class="modal fade" id="modal">
-        <div class="modal-dialog w-50 text-center" role="document">
-            <div class="modal-content bg-dark">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="contenido">
                 <div class="modal-body"></div>
             </div>
             <!-- modal -->

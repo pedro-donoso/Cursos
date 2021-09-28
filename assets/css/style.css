@@ -1,9 +1,18 @@
 /* variables */
+:root {
+    /* colores */
+--color-uno: #79f450;
+--color-dos: #507ff4;
+--color-tres: #e17a0c;
+--color-cuatro: #b916da;
+--color-cinco: #20283c;
+--color-seis: #d2d4dc;
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* fuentes */
+--fuente-uno: 'Courier New';
+--fuente-dos: 'Franklin Gothic Medium';
+--fuente-tres: 'Trebuchet MS';
+--fuente-cuatro: 'Lucida Sans';
 }
 
 
@@ -12,7 +21,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
-    height: 100vh;
+    height: 110vh;
     padding: 30px;
 }
 
@@ -25,8 +34,11 @@ body {
 }
 
 #Cursos {
-    height: 100%;
-    background: #f0f0f0;
+    height: 92%;
+    background: var(--color-uno);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 #Cursos div div {
@@ -39,4 +51,63 @@ body {
 
 .modal-dialog {
     max-width: 100%;
+}
+
+#Tabla{
+    background: var(--color-dos);
+    font-family: var(--fuente-dos);
+    text-align: center;
+    border-radius: 1%;
+    padding-top: 1em;
+}
+
+#Registro {
+       font-family: var(--fuente-tres);
+        color: var(--color-seis);
+          border-radius: 1%;
+}
+
+#curso{
+    background: var(--color-cinco);
+        font-family: var(--fuente-uno);
+        color: var(--color-seis);
+}
+
+#sede {
+    background: var(--color-cinco);
+         font-family: var(--fuente-uno);
+            color: var(--color-seis);
+}
+
+#modalidad {
+    background: var(--color-cinco);
+         font-family: var(--fuente-uno);
+            color: var(--color-seis);
+}
+
+#comentarios {
+    background: var(--color-seis);
+      font-family: var(--fuente-uno);
+       color: var(--color-cinco);
+}
+
+#Registrar{
+      font-family: var(--fuente-tres);
+       color: var(--color-cinco);
+}
+
+#Borrar{
+      margin-top: 1em;
+
+}
+
+#modal{
+width: 50%;
+text-align: center;
+}
+
+#contenido {
+    width: 90%;
+    text-align: center;
+    background-color: var(--color-cinco);
 }
