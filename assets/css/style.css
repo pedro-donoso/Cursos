@@ -54,8 +54,8 @@ body {
 }
 
 #Tabla{
-    background: var(--color-dos);
-    font-family: var(--fuente-dos);
+    font-family: var(--fuente-tres);
+    color: var(--color-cuatro);
     text-align: center;
     border-radius: 1%;
     padding-top: 1em;
