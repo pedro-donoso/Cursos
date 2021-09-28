@@ -22,7 +22,6 @@
 
 }
 
-
 body {
     background-image: var(--fondo-cuatro);
     background-position: center;
@@ -104,7 +103,6 @@ body {
 
 #Borrar{
       margin-top: 1em;
-
 }
 
 #modal{
@@ -118,4 +116,5 @@ text-align: center;
     text-align: center;
     background-color: var(--color-cinco);
 }
+
 
