@@ -30,7 +30,7 @@ export class Curso {
         return this.#modalidad;
     }
     
-    get Img(){
+    get Img2(){
         return this.#img;
     }
 
