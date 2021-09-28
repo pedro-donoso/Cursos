@@ -68,7 +68,7 @@ function Course__vista() {
                 <p class="text-white text-center" style="font-size: 16px">Curso: ${Course__tarjeta.Curso}</p>
                 <p class="text-white text-center" style="font-size: 16px">Sede: ${Course__tarjeta.Sede}</p>
                  <p class="text-white text-center" style="font-size: 16px">Modalidad: ${Course__tarjeta.Modalidad}</p>
-                <p class="text-white text-center" style="font-size: 16px">Comentarios: ${Course__tarjeta.Comentarios}</p>
+                <p class="text-white text-center" style="font-size: 16px">Reservó: ${Course__tarjeta.Comentarios}</p>
                 `
         })
 
