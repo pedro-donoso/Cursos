@@ -56,7 +56,7 @@ body {
 }
 
 .modal-dialog {
-    max-width: 75%;
+    max-width: 100%;
 }
 
 #Tabla{
@@ -113,7 +113,9 @@ text-align: center;
 }
 
 #contenido {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background-color: var(--color-cinco);
 }
+
